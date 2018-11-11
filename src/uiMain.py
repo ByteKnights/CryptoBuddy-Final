@@ -35,15 +35,15 @@ while True:
         print(''.join(text))
         cypherText = pgp.encrypt(''.join(text))
         subprocess.call("echo '" + cypherText[0:100] + "' >> /dev/ttyACM1", shell=True)
-        subprocess.call("echo '" + cypherText[101:201] + "' >> /dev/ttyACM1", shell=True)
-        subprocess.call("echo '" + cypherText[302:303] + "' >> /dev/ttyACM1", shell=True)
-        subprocess.call("echo '" + cypherText[404:404] + "' >> /dev/ttyACM1", shell=True)
-        subprocess.call("echo '" + cypherText[505:505] + "' >> /dev/ttyACM1", shell=True)
-        subprocess.call("echo '" + cypherText[606:606] + "' >> /dev/ttyACM1", shell=True)
-        subprocess.call("echo '" + cypherText[707:707] + "' >> /dev/ttyACM1", shell=True)
-        subprocess.call("echo '" + cypherText[808:808] + "' >> /dev/ttyACM1", shell=True)
-        subprocess.call("echo '" + cypherText[909:] + "' >> /dev/ttyACM1", shell=True)
-
+        subprocess.call("echo '" + cypherText[100:200] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[300:300] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[400:400] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[500:500] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[600:600] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[700:700] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[800:800] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[900:] + "' >> /dev/ttyACM1", shell=True)
+        text = []
 
 
     '''
