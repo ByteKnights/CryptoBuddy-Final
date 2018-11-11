@@ -19,7 +19,7 @@ gpg = gnupg.GPG(gnupghome='/home/pi/.gnupg')
 
 def encrypt(plainText):
     if len(plainText) <= 70:
-        cipherText = gpg.encrypt(plainText, "F0397A50BB1C44A63B969F91261F5FA3BE21919F")
+        cipherText = gpg.encrypt(plainText, "6FCE5634DD55D98671FC1585A59F24FD6F92D663")
         if cipherText.status == 'encryption ok':
             return str(cipherText)
     else:
