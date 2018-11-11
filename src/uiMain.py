@@ -4,6 +4,7 @@ import serialSend
 import pgp
 import findPort
 import lifesaver
+import subprocess
 
 device_name = "/dev/ttyACM0"
 
@@ -30,7 +31,11 @@ def update():
 while True:
     key = lifesaver.getch()
     if key == '\x1b':
-        serialSend.send("/dev/ttyACM1", pgp.encrypt(''.join(text)))
+
+        # serialSend.send("/dev/ttyACM1", str(pgp.encrypt(''.join(text))))
+        cypherText = str(pgp.encrypt(''.join(text)))
+        subprocess.call(['echo " ', cypherText, '" >> /dev/ttyACM1'], shell=True)
+')
 
 
     '''
