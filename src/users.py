@@ -1,6 +1,5 @@
 import pickle
 
-
 userFingerprints = pickle.load(open("userFingerprints.p", "rb"))
 
 
