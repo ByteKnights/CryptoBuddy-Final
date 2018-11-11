@@ -30,7 +30,8 @@ def update():
 while True:
     key = lifesaver.getch()
     if key == '\x1b':
-        serialSend.send("/dev/ttyACM1", pgp.encrypt(text))
+        textStr = ''.join(text)
+        serialSend.send("/dev/ttyACM1", pgp.encrypt(textStr))
 
 
     '''
