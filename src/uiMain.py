@@ -2,10 +2,10 @@ import driver
 import math
 
 import serialSend
-import pgp
+#import pgp
 import findPort
 
-from pynput.keyboard import Key, Listener
+import lifesaver
 
 device_name = '/dev/ttyACM6'
 width = 20
@@ -28,7 +28,9 @@ def update():
     screen.println(text)
     screen.setCursor(curPos % 20, math.trunc(curPos))
 
-def on_press(key):
+while True:
+    key = lifesaver.getch()
+    '''
     if key == Key.space:
         text.append(' ')
         curPos = 1
@@ -42,13 +44,7 @@ def on_press(key):
         print(key)
     if key == Key.esc:
         print(type(text))
-    else:
-        text.append(key.char)
-        curPos = 1
-        update()
-
-# Collect events until released
-with Listener(
-        on_press=on_press,
-        on_release=on_release) as listener:
-    listener.join()
+    '''
+    text.append(key)
+    curPos = 1
+    update()
