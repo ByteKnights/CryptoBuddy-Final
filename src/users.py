@@ -1,6 +1,9 @@
 import pickle
 
-userFingerprints = pickle.load(open("userFingerprints.p", "rb"))
+try:
+    userFingerprints = pickle.load(open("userFingerprints.p", "rb"))
+except IOError:
+    pass
 
 
 def saveFingerprints():
