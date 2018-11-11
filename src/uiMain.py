@@ -1,13 +1,11 @@
 import driver
 import math
-
 import serialSend
-#import pgp
+import pgp
 import findPort
-
 import lifesaver
 
-device_name = '/dev/ttyACM6'
+device_name = findPort.findScreen()
 width = 20
 height = 4
 text = []
@@ -30,6 +28,10 @@ def update():
 
 while True:
     key = lifesaver.getch()
+    if key == '\x1b':
+        serialSend.send(findPort.findParticle(), pgp.encrypt(text))
+
+
     '''
     if key == Key.space:
         text.append(' ')
