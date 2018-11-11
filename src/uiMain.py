@@ -31,11 +31,19 @@ def update():
 while True:
     key = lifesaver.getch()
     if key == '\x1b':
-
         # serialSend.send("/dev/ttyACM1", str(pgp.encrypt(''.join(text))))
-        cypherText = str(pgp.encrypt(''.join(text)))
-        subprocess.call(['echo " ', cypherText, '" >> /dev/ttyACM1'], shell=True)
-')
+        print(''.join(text))
+        cypherText = pgp.encrypt(''.join(text))
+        subprocess.call("echo '" + cypherText[0:100] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[101:201] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[302:303] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[404:404] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[505:505] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[606:606] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[707:707] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[808:808] + "' >> /dev/ttyACM1", shell=True)
+        subprocess.call("echo '" + cypherText[909:] + "' >> /dev/ttyACM1", shell=True)
+
 
 
     '''

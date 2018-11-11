@@ -1,5 +1,5 @@
 import gnupg
-gpg = gnupg.GPG(gnupghome='/home/nova/.gnupg')
+gpg = gnupg.GPG(gnupghome='/home/pi/.gnupg')
 
 
 # def addKey(fingerprint, user):
@@ -19,7 +19,7 @@ gpg = gnupg.GPG(gnupghome='/home/nova/.gnupg')
 
 def encrypt(plainText):
     if len(plainText) <= 70:
-        cipherText = gpg.encrypt(plainText, "CryptoBuddy Keypair")
+        cipherText = gpg.encrypt(plainText, "")
         if cipherText.status == 'encryption ok':
             return str(cipherText)
     else:
