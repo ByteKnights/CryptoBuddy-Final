@@ -26,7 +26,7 @@ class Driver:
         self.dev.close()
         del self.dev
 
-    def lcdWrite(self, data, debug=True):
+    def lcdWrite(self, data, debug=False):
         if debug:
             print(data)
         self.dev.write(chr(data))
