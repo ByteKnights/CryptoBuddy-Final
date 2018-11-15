@@ -1,3 +1,8 @@
+"""
+Author
+Nova Trauben
+"""
+
 import gnupg
 gpg = gnupg.GPG(gnupghome='/home/pi/.gnupg')
 

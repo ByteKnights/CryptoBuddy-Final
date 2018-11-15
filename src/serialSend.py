@@ -1,3 +1,8 @@
+"""
+Author
+Nova Trauben
+"""
+
 import serial
 
 

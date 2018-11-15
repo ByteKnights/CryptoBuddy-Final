@@ -32,8 +32,8 @@ while True:
     key = lifesaver.getch()
     if key == '\x1b':
         # serialSend.send("/dev/ttyACM1", str(pgp.encrypt(''.join(text))))
-        print(''.join(text))
         cypherText = pgp.encrypt(''.join(text))
+        print(type(cypherText))
         subprocess.call("echo '" + cypherText + "' >> /dev/ttyACM1", shell=True)
 
         text = []

@@ -1,3 +1,9 @@
+"""
+Author
+Nova Trauben
+"""
+
+
 import pickle
 
 try:
