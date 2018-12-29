@@ -1,6 +1,6 @@
 [![Built with po-util](https://rawgit.com/nrobinson2000/po-util/master/images/built-with-po-util.svg)](https://po-util.com)
 
-# CryptoBuddy
+# [CryptoBuddy](https://www.hackster.io/byte-knights/crypto-buddy-0d2845)
 
 This project was made during a [Hackwitus](hackwit.us) hackathon sponsered by [MHL](mhl.io).
 
